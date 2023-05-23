@@ -159,11 +159,13 @@ h2 {
     font-size: 30px;
     left: 50%;
     top: 85%;
+    transform: translateX(-50%);
   }
   .wind {
     font-size: 30px;
     left: 55%;
     top: 70%;
+    transform: translateX(-50%);
   }
   .feels {
     font-size: 30px;
@@ -172,8 +174,9 @@ h2 {
   }
 
   .search input {
-    left: 40%;
+    left: 50%;
     transform: translateX(-50%);
+    width: 80%;
   }
 
   .weather-icon {
@@ -183,12 +186,13 @@ h2 {
   .col3 {
     width: 60px;
     position: absolute;
-    left: 350px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 90%;
   }
 
   .btn {
-    left: 70%;
+    left: 50%;
     transform: translateX(-50%);
   }
 }
@@ -196,7 +200,6 @@ h2 {
 @media (max-width: 480px) {
   .card {
     width: 80%;
-    height: 100%;
   }
 
   h1 {
@@ -214,11 +217,13 @@ h2 {
     font-size: 30px;
     left: 30%;
     top: 85%;
+    transform: translateX(-50%);
   }
   .wind {
     font-size: 30px;
     left: 45%;
     top: 70%;
+    transform: translateX(-50%);
   }
   .feels {
     font-size: 30px;
@@ -229,7 +234,7 @@ h2 {
   .search input {
     left: 10%;
     transform: translateX(-0%);
-    width: 40%;
+    width: 80%;
   }
 
   .weather-icon {
@@ -239,23 +244,24 @@ h2 {
   .col3 {
     width: 60px;
     position: absolute;
-    left: 250px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 90%;
   }
   .img1 {
     width: 40px;
     margin-right: 220px;
   }
-  
 
   .btn {
-    left: 70%;
-    transform: translateX(-20%);
+    left: 50%;
+    transform: translateX(-50%);
   }
-}@media (max-width: 375px) {
+}
+
+@media (max-width: 375px) {
   .card {
     width: 80%;
-    height: 100%;
   }
 
   h1 {
@@ -273,114 +279,17 @@ h2 {
     font-size: 30px;
     left: 20%;
     top: 85%;
+    transform: translateX(-50%);
   }
   .wind {
     font-size: 30px;
     left: 35%;
     top: 70%;
+    transform: translateX(-50%);
   }
   .feels {
-    font-size: 30px;
-    left: -40%;
-    top: 70%;
+    font-size: 30
   }
-
-  .search input {
-    left: 35%;
-    transform: translateX(-50%);
-    width: 30%;
-  }
-
-  .weather-icon {
-    right: 50%;
-    transform: translateX(50%);
-  }
-  .col3 {
-    width: 20px;
-    position: absolute;
-    left: 210px;
-    top: 90%;
-  }
-  .img1 {
-    width: 30px;
-    margin-right: 130px;
-  }
-  .col {
-   left: 210px;
-  }
-  
-
-  .btn {
-    left: 65%;
-    transform: translateX(-20%);
-  }
-  
-}
-@media (max-width: 320px) {
-  .card {
-    width: 80%;
-    height: 100%;
-  }
-
-  h1 {
-    font-size: 50px;
-    right: 80px;
-  }
-
-  h2 {
-    font-size: 40px;
-    right: 80px;
-    top: 50%;
-  }
-
-  .humidity {
-    font-size: 20px;
-    left: 20%;
-    top: 85%;
-  }
-  .wind {
-    font-size: 20px;
-    left: 35%;
-    top: 73%;
-  }
-  .feels {
-    font-size: 20px;
-    left: -40%;
-    top: 73%;
-  }
-
-  .search input {
-    left: 35%;
-    transform: translateX(-50%);
-    width: 30%;
-    font-size:15px;
-  }
-
-  .weather-icon {
-    right: 50%;
-    transform: translateX(50%);
-  }
-  .col3 {
-    width: 20px;
-    position: absolute;
-    left: 180px;
-    top: 85%;
-  }
-  .img1 {
-    width: 30px;
-    margin-right: 100px;
-  }
-  .col {
-   left: 210px;
-  }
-  
-
-  .btn {
-    left: 65%;
-    transform: translateX(-20%);
-    font-size: 15px;
-  }
-  
 }
 
 
