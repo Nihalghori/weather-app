@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="card">
+        <div class="search">
+    <form onsubmit="getWeather(); return false">
+    
+    <input type="text" name="cityName" id="cityName" placeholder="enter your city name">
+    <br>
+    <button type="submit" class="btn">search</button>
+</form>
+<div class="weather">
+    <img src="icons8-partly-cloudy-day-100.png"class = "weather-icon"></div>
+    <h1 class="temp">24.9°C</h1>
+    <h2 class="city">New york</h2>
+    <h2 class="feels">23°C</h2>
+    <div class="details">
+        <div class="col">
+    <img class ="img1"src="icons8-wave-lines-50.png">
+    <div>
+        <h2 class="humidity">50%<br>
+        </h2>
+        
+        
+    </div>
+    <div class="col2">
+        <img src="icons8-wind-50.png">
+        <div>
+            <h2 class="wind">20km/hr<br>
+            </h2>
+            <div class="col3">
+                <img src="icons8-thermometer-automation-50.png">
+                    <h2 class="feels">
+                    </h2></div>
+              </div>
+            </div>
+         </div>
+     </div>
+</div> 
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="module">
+   
+    window.getWeather = function(event) {
+        let cityName = document.querySelector("#cityName").value;
+        let weatherIcon = document.querySelector(".weather-icon");
+      
+        
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e0f99c494c2ce394a18cc2fd3f100543&units=metric`)
+       .then(function (response) {
+        // handle success
+         console.log(response.data);
+         document.querySelector(".temp").innerHTML = (response.data.main.temp) + "°C";
+         document.querySelector(".city").innerHTML = (response.data.name);
+         document.querySelector(".humidity").innerHTML = (response.data.main.humidity) + " % ";
+         document.querySelector(".wind").innerHTML = (response.data.wind.speed) + "km/h";
+         document.querySelector(".feels").innerHTML = (response.data.main.feels_like) ;
+        
+         let temperature = response.data.main.temp;
+         if (temperature <=29) {
+            weatherIcon.src ="./icons8-partly-cloudy-day-100.png";
+         } else if (temperature > 30) {
+            weatherIcon.src = "./icons8-sun-80.png";
+         } else {
+            weatherIcon.style.backgroundImage = "url('normal.png')";
+         }
+      })
+     .catch(function (error) {
+    // handle error
+      console.log(error);
+    })
+  }
+ 
+ 
+</script>
+
+
+
+</body>
+</html>
