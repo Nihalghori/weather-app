@@ -3,6 +3,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -192,7 +195,7 @@ h2 {
 
 @media (max-width: 480px) {
   .card {
-    width: 60%;
+    width: 80%;
     height: 100%;
   }
 
@@ -251,7 +254,7 @@ h2 {
   }
 }@media (max-width: 375px) {
   .card {
-    width: 50%;
+    width: 80%;
     height: 100%;
   }
 
